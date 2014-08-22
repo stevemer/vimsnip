@@ -38,6 +38,7 @@ function! Snippet() range
   let output = split(split(system(REQUEST), '\n')[3], ',')[0][9:-2]
   let snipsite = "https://stash.my_server.com/plugins/servlet/snippets/"
   let location = "Your paste has been uploaded to ".snipsite.output
+  let @* = snipsite.output
   redraw
   echomsg location
   unlet g:nickID
